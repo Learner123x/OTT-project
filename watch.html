@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watching - StreamFlix</title>
+</head>
+<body style="margin: 0; background-color: #000; display: flex; align-items: center; justify-content: center;">
+    <video controls autoplay style="width: 100vw; height: 100vh;">
+        <!-- 
+            This URL points to your backend streaming endpoint. 
+            For this to work, you need:
+            1. The backend to be running.
+            2. A folder named "videos" in the root of your Spring project.
+            3. A file named "sample.mp4" inside that "videos" folder.
+        -->
+        <source src="http://localhost:8080/api/stream/sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
