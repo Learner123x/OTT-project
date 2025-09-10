@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix OTT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#0d0d0d',
+                        'accent-purple': '#cc73f8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-dark">
+
+    <!-- Floating Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 p-4">
+        <nav class="container mx-auto max-w-4xl px-6 py-3 bg-black/30 backdrop-blur-lg rounded-full border border-white/10">
+            <div class="flex items-center justify-between">
+                <a href="login.html" class="text-2xl font-bold text-white">StreamFlix</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Movies</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">TV Shows</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">My List</a>
+                </div>
+                <!-- Profile Icon (Example) -->
+                <div class="flex items-center space-x-4">
+                     <!-- This is the notification bell, it is not a link -->
+                     <svg class="w-6 h-6 text-gray-300 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                    
+                    <!-- This is the profile icon, wrapped in the correct link -->
+                    <a href="login.html">
+                        <svg class="w-6 h-6 text-gray-300 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </a>
+                </div>
+                   
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-24">
+        <section class="container mx-auto px-4 md:px-8 text-white">
+            <!-- THIS BACKGROUND IMAGE URL IS NOW CORRECT -->
+            <div class="relative rounded-2xl overflow-hidden h-[500px] flex items-end p-8 bg-cover bg-center" 
+                 style="background-image: url('images/hero-dune.jpg');"
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Dune: Part Two</h1>
+                    <p class="max-w-xl mb-6 text-gray-300">
+                        Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.
+                    </p>
+                    <div class="flex space-x-4">
+    <!-- This is the corrected "Watch Now" link -->
+    <a href="watch.html" class="bg-accent-purple text-white font-bold py-3 px-6 rounded-full hover:bg-purple-500 transition-colors">
+        ▶ Watch Now
+    </a>
+
+    <!-- This is the "More Info" button, which we can leave as a button for now -->
+    <button class="bg-white/20 text-white font-bold py-3 px-6 rounded-full hover:bg-white/30 transition-colors">
+        More Info
+    </button>
+</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content Carousels Section -->
+        <section class="container mx-auto px-4 md:px-8 py-8 space-y-8">
+            <div>
+                <h2 class="text-white text-2xl font-bold mb-4">Trending Now</h2>
+                <div id="trending-container" class="flex overflow-x-auto space-x-4 pb-4">
+                    <!-- This will be filled by script.js -->
+                </div>
+            </div>
+            <div>
+                <h2 class="text-white text-2xl font-bold mb-4">Popular TV Shows</h2>
+                <div id="tvshows-container" class="flex overflow-x-auto space-x-4 pb-4">
+                    <!-- This will be filled by script.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
